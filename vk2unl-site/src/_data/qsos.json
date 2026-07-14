@@ -1,0 +1,54 @@
+[
+  {
+    "date": "2026-06-14",
+    "utc": "0930",
+    "callsign": "VK3XYZ",
+    "band": "40m",
+    "mode": "SSB",
+    "rst_sent": "59",
+    "rst_recv": "57",
+    "location": "Melbourne, VIC",
+    "lat": -37.8136,
+    "lng": 144.9631,
+    "notes": "Ragchew about antenna builds"
+  },
+  {
+    "date": "2026-06-20",
+    "utc": "1105",
+    "callsign": "ZL1ABC",
+    "band": "20m",
+    "mode": "FT8",
+    "rst_sent": "-08",
+    "rst_recv": "-12",
+    "location": "Auckland, NZ",
+    "lat": -36.8485,
+    "lng": 174.7633,
+    "notes": "First trans-Tasman contact"
+  },
+  {
+    "date": "2026-07-02",
+    "utc": "0815",
+    "callsign": "JA1DEF",
+    "band": "15m",
+    "mode": "FT8",
+    "rst_sent": "-05",
+    "rst_recv": "-10",
+    "location": "Tokyo, Japan",
+    "lat": 35.6762,
+    "lng": 139.6503,
+    "notes": ""
+  },
+  {
+    "date": "2026-07-10",
+    "utc": "2140",
+    "callsign": "W6GHI",
+    "band": "20m",
+    "mode": "SSB",
+    "rst_sent": "58",
+    "rst_recv": "55",
+    "location": "Los Angeles, USA",
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "notes": "Long path, good signal"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "vk2unl-site",
+  "version": "1.0.0",
+  "description": "VK2UNL amateur radio blog & station log",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,51 @@
+---
+layout: base.njk
+title: QSO Log
+---
+<section class="section">
+  <h2 class="section-heading">QSO log</h2>
+  <p style="color:var(--muted)">{{ qsos.length }} contacts logged. Edit <code>src/_data/qsos.json</code> to add more — the table and globe both read from it.</p>
+
+  <div class="log-filters">
+    <input type="text" id="filter-callsign" placeholder="Filter callsign…">
+    <select id="filter-band">
+      <option value="">All bands</option>
+    </select>
+    <select id="filter-mode">
+      <option value="">All modes</option>
+    </select>
+  </div>
+
+  <div class="table-wrap">
+    <table class="qso-log" id="qso-table">
+      <thead>
+        <tr>
+          <th data-key="date">Date</th>
+          <th data-key="utc">UTC</th>
+          <th data-key="callsign">Callsign</th>
+          <th data-key="band">Band</th>
+          <th data-key="mode">Mode</th>
+          <th data-key="rst_sent">RST S</th>
+          <th data-key="rst_recv">RST R</th>
+          <th data-key="location">Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for q in qsos %}
+        <tr data-callsign="{{ q.callsign }}" data-band="{{ q.band }}" data-mode="{{ q.mode }}">
+          <td>{{ q.date }}</td>
+          <td>{{ q.utc }}</td>
+          <td>{{ q.callsign }}</td>
+          <td>{{ q.band }}</td>
+          <td>{{ q.mode }}</td>
+          <td>{{ q.rst_sent }}</td>
+          <td>{{ q.rst_recv }}</td>
+          <td>{{ q.location }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script src="{{ '/js/log.js' | url }}"></script>

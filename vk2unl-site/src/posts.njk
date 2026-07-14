@@ -1,0 +1,16 @@
+---
+layout: base.njk
+title: Posts
+permalink: /posts/index.html
+---
+<section class="section">
+  <h2 class="section-heading">All log entries</h2>
+  <ul class="post-list">
+    {% for post in collections.posts %}
+    <li>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      <span class="post-date">{{ post.date | dateDisplay }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

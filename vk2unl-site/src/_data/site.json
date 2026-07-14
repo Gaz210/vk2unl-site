@@ -1,0 +1,14 @@
+{
+  "title": "VK2UNL",
+  "tagline": "Station log, builds & signal notes",
+  "callsign": "VK2UNL",
+  "qth": "West Pymble, Sydney, NSW",
+  "grid": "TODO-check-your-grid-square",
+  "home": {
+    "lat": -33.7667,
+    "lng": 151.1414
+  },
+  "sdrEmbedUrl": "",
+  "dmrId": "",
+  "onlineStatusUrl": ""
+}

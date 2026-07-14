@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: Home
+---
+<section class="hero">
+  <div class="dial-bezel">
+    <span class="dial-label n">N</span>
+    <span class="dial-label e">E</span>
+    <span class="dial-label s">S</span>
+    <span class="dial-label w">W</span>
+    <div id="globe-container"></div>
+  </div>
+
+  <div class="callsign-stamp">{{ site.callsign }}</div>
+  <div class="tagline">{{ site.tagline }} · {{ site.qth }}</div>
+
+  <div class="hero-meta">
+    <span>GRID <strong style="color:var(--phosphor)">{{ site.grid }}</strong></span>
+    <span>QSOs <strong style="color:var(--phosphor)">{{ qsos.length }}</strong></span>
+    {% if site.dmrId %}<span>DMR ID <strong style="color:var(--phosphor)">{{ site.dmrId }}</strong></span>{% endif %}
+    <span class="status-pill" data-state="unknown" id="online-status">
+      <span class="status-dot"></span>
+      <span id="online-status-text">status unknown</span>
+    </span>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-heading">Recent log entries</h2>
+  <ul class="post-list">
+    {% for post in collections.posts.slice(0, 6) %}
+    <li>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      <span class="post-date">{{ post.date | dateDisplay }}</span>
+    </li>
+    {% else %}
+    <li><span>No posts yet — drop a markdown file in <code>src/posts/</code> to get started.</span></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section">
+  <h2 class="section-heading">Around the shack</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>QSO log</h3>
+      <p>Every contact plotted on the globe above, browsable and filterable.</p>
+      <p><a href="{{ '/log/' | url }}">View log →</a></p>
+    </div>
+    <div class="card">
+      <h3>Band conditions</h3>
+      <p>Live solar-terrestrial data — SFI, K-index, and band-by-band outlook.</p>
+      <p><a href="{{ '/propagation/' | url }}">Check bands →</a></p>
+    </div>
+    <div class="card">
+      <h3>On the air now</h3>
+      <p>Live status badge — wired up once your monitoring script is running.</p>
+      <p>See notes in <code>README.md</code> for hooking this up.</p>
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/globe.gl"></script>
+<script>
+  window.SITE_HOME = {{ site.home | dump | safe }};
+  window.SITE_QSOS = {{ qsos | dump | safe }};
+  window.SITE_STATUS_URL = {{ site.onlineStatusUrl | dump | safe }};
+</script>
+<script src="{{ '/js/globe.js' | url }}"></script>
+<script src="{{ '/js/status.js' | url }}"></script>
