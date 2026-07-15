@@ -3,10 +3,10 @@
   "tagline": "Station log, builds & signal notes",
   "callsign": "VK2UNL",
   "qth": "West Pymble, Sydney, NSW",
-  "grid": "TODO-check-your-grid-square",
+  "grid": "QF56ng",
   "home": {
-    "lat": -33.7667,
-    "lng": 151.1414
+    "lat": -33.7489,
+    "lng": 151.092
   },
   "sdrEmbedUrl": "",
   "dmrId": "",

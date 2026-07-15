@@ -3,7 +3,7 @@
   const container = document.getElementById("globe-container");
   if (!container || typeof Globe === "undefined") return;
 
-  const home = window.SITE_HOME || { lat: -33.7667, lng: 151.1414 };
+  const home = window.SITE_HOME || { lat: -33.7489, lng: 151.092 };
   const qsos = (window.SITE_QSOS || []).filter((q) => q.lat != null && q.lng != null);
 
   const arcsData = qsos.map((q) => ({
