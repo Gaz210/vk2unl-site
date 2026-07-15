@@ -28,7 +28,7 @@ jobs:
           # Set this to "/your-repo-name/" if this is a project page
           # (i.e. not deployed at username.github.io root). Leave as "/"
           # if this repo IS your username.github.io site.
-          ELEVENTY_PATH_PREFIX: /vk2unl-site/
+          ELEVENTY_PATH_PREFIX: /
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "_site"
