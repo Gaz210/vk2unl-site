@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADX>
+  <HEADER>
+    <ADIF_VER>3.1.4</ADIF_VER>
+    <PROGRAMID>vk2unl-site</PROGRAMID>
+  </HEADER>
+  <RECORDS>
+    <RECORD>
+      <CALL>VK3XYZ</CALL>
+      <QSO_DATE>20260614</QSO_DATE>
+      <TIME_ON>0930</TIME_ON>
+      <BAND>40M</BAND>
+      <MODE>SSB</MODE>
+      <RST_SENT>59</RST_SENT>
+      <RST_RCVD>57</RST_RCVD>
+      <GRIDSQUARE>QF22ig</GRIDSQUARE>
+      <COUNTRY>Australia</COUNTRY>
+      <QTH>Melbourne, VIC</QTH>
+      <NOTES>Ragchew about antenna builds</NOTES>
+    </RECORD>
+    <RECORD>
+      <CALL>ZL1ABC</CALL>
+      <QSO_DATE>20260620</QSO_DATE>
+      <TIME_ON>1105</TIME_ON>
+      <BAND>20M</BAND>
+      <MODE>FT8</MODE>
+      <RST_SENT>-08</RST_SENT>
+      <RST_RCVD>-12</RST_RCVD>
+      <GRIDSQUARE>RF73gi</GRIDSQUARE>
+      <COUNTRY>New Zealand</COUNTRY>
+      <QTH>Auckland</QTH>
+      <NOTES>First trans-Tasman contact</NOTES>
+    </RECORD>
+    <RECORD>
+      <CALL>JA1DEF</CALL>
+      <QSO_DATE>20260702</QSO_DATE>
+      <TIME_ON>0815</TIME_ON>
+      <BAND>15M</BAND>
+      <MODE>FT8</MODE>
+      <RST_SENT>-05</RST_SENT>
+      <RST_RCVD>-10</RST_RCVD>
+      <GRIDSQUARE>PM95tq</GRIDSQUARE>
+      <COUNTRY>Japan</COUNTRY>
+      <QTH>Tokyo</QTH>
+      <NOTES></NOTES>
+    </RECORD>
+    <RECORD>
+      <CALL>W6GHI</CALL>
+      <QSO_DATE>20260710</QSO_DATE>
+      <TIME_ON>2140</TIME_ON>
+      <BAND>20M</BAND>
+      <MODE>SSB</MODE>
+      <RST_SENT>58</RST_SENT>
+      <RST_RCVD>55</RST_RCVD>
+      <GRIDSQUARE>DM04jc</GRIDSQUARE>
+      <COUNTRY>USA</COUNTRY>
+      <QTH>Los Angeles, CA</QTH>
+      <NOTES>Long path, good signal</NOTES>
+    </RECORD>
+  </RECORDS>
+</ADX>

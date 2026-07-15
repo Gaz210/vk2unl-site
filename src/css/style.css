@@ -1,14 +1,13 @@
 :root {
-  --bg: #0d1210;
-  --panel: #141b18;
-  --panel-raised: #182019;
-  --phosphor: #59d98c;
-  --phosphor-dim: #2f6b48;
-  --amber: #ffb347;
-  --text: #e8ede9;
-  --muted: #7d8b84;
-  --hairline: #2a332e;
-  --font-display: "Big Shoulders Stencil", sans-serif;
+  --bg: #08080b;
+  --panel: #111116;
+  --panel-raised: #17161d;
+  --accent: #8b7cf6;
+  --accent-dim: #332c52;
+  --text: #e9e9ee;
+  --muted: #74737f;
+  --hairline: #232229;
+  --font-display: "IBM Plex Mono", monospace;
   --font-mono: "IBM Plex Mono", monospace;
   --font-body: "IBM Plex Sans", sans-serif;
 }
@@ -25,11 +24,11 @@ body {
   line-height: 1.55;
 }
 
-a { color: var(--phosphor); text-decoration: none; }
+a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--amber);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -51,10 +50,10 @@ a:focus-visible, button:focus-visible {
   font-family: var(--font-mono);
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: var(--phosphor);
+  color: var(--accent);
   font-size: 1rem;
 }
-.brand:hover { text-decoration: none; text-shadow: 0 0 12px var(--phosphor-dim); }
+.brand:hover { text-decoration: none; text-shadow: 0 0 12px var(--accent-dim); }
 
 .topnav { display: flex; gap: 1.5rem; }
 .topnav a {
@@ -64,7 +63,7 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.topnav a:hover { color: var(--phosphor); text-decoration: none; }
+.topnav a:hover { color: var(--accent); text-decoration: none; }
 
 /* ---------- Hero / Dial bezel ---------- */
 .hero {
@@ -85,7 +84,7 @@ a:focus-visible, button:focus-visible {
   border: 1px solid var(--hairline);
   box-shadow:
     inset 0 0 40px rgba(0,0,0,0.6),
-    0 0 60px rgba(89, 217, 140, 0.06);
+    0 0 60px rgba(139, 124, 246, 0.05);
 }
 
 .dial-ticks {
@@ -116,15 +115,13 @@ a:focus-visible, button:focus-visible {
 
 .callsign-stamp {
   margin-top: 1.75rem;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  letter-spacing: 0.04em;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  letter-spacing: 0.02em;
   color: var(--text);
-  text-shadow: 0 0 24px rgba(89, 217, 140, 0.25);
-  border: 2px solid var(--phosphor-dim);
-  padding: 0.1em 0.4em;
-  transform: rotate(-1.5deg);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.15em;
 }
 
 .tagline {
@@ -141,7 +138,7 @@ a:focus-visible, button:focus-visible {
   margin-top: 1.25rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--phosphor);
+  color: var(--accent);
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -163,8 +160,8 @@ a:focus-visible, button:focus-visible {
   background: var(--muted);
 }
 .status-pill[data-state="online"] .status-dot {
-  background: var(--phosphor);
-  box-shadow: 0 0 8px var(--phosphor);
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
 }
 .status-pill[data-state="offline"] .status-dot { background: #5a4a3a; }
 
@@ -177,10 +174,10 @@ a:focus-visible, button:focus-visible {
 
 .section-heading {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.6rem;
   letter-spacing: 0.03em;
-  color: var(--amber);
+  color: var(--accent);
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--hairline);
   padding-bottom: 0.4rem;
@@ -198,7 +195,7 @@ a:focus-visible, button:focus-visible {
   border-radius: 6px;
   padding: 1.1rem 1.25rem;
 }
-.card h3 { margin: 0 0 0.4rem; font-family: var(--font-mono); font-size: 0.95rem; color: var(--phosphor); }
+.card h3 { margin: 0 0 0.4rem; font-family: var(--font-mono); font-size: 0.95rem; color: var(--accent); }
 .card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 
 /* ---------- Post list ---------- */
@@ -215,7 +212,7 @@ a:focus-visible, button:focus-visible {
 
 article.post h1 {
   font-family: var(--font-display);
-  color: var(--amber);
+  color: var(--accent);
   font-size: 2rem;
 }
 article.post { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem; }
@@ -236,14 +233,14 @@ table.qso-log th, table.qso-log td {
   white-space: nowrap;
 }
 table.qso-log th {
-  color: var(--amber);
+  color: var(--accent);
   text-transform: uppercase;
   font-size: 0.7rem;
   letter-spacing: 0.06em;
   cursor: pointer;
   user-select: none;
 }
-table.qso-log th:hover { color: var(--phosphor); }
+table.qso-log th:hover { color: var(--accent); }
 table.qso-log tbody tr:hover { background: var(--panel-raised); }
 
 .log-filters {
@@ -278,7 +275,7 @@ table.qso-log tbody tr:hover { background: var(--panel-raised); }
 .prop-stat .value {
   font-family: var(--font-mono);
   font-size: 1.6rem;
-  color: var(--phosphor);
+  color: var(--accent);
 }
 .prop-stat .label {
   font-family: var(--font-mono);
@@ -304,7 +301,7 @@ table.qso-log tbody tr:hover { background: var(--panel-raised); }
   font-size: 0.75rem;
   color: var(--muted);
 }
-.footer-muted { color: var(--phosphor-dim); }
+.footer-muted { color: var(--accent-dim); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

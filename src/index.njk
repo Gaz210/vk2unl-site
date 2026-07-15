@@ -15,9 +15,9 @@ title: Home
   <div class="tagline">{{ site.tagline }} · {{ site.qth }}</div>
 
   <div class="hero-meta">
-    <span>GRID <strong style="color:var(--phosphor)">{{ site.grid }}</strong></span>
-    <span>QSOs <strong style="color:var(--phosphor)">{{ qsos.length }}</strong></span>
-    {% if site.dmrId %}<span>DMR ID <strong style="color:var(--phosphor)">{{ site.dmrId }}</strong></span>{% endif %}
+    <span>GRID <strong style="color:var(--accent)">{{ site.grid }}</strong></span>
+    <span>QSOs <strong style="color:var(--accent)">{{ qsos.length }}</strong></span>
+    {% if site.dmrId %}<span>DMR ID <strong style="color:var(--accent)">{{ site.dmrId }}</strong></span>{% endif %}
     <span class="status-pill" data-state="unknown" id="online-status">
       <span class="status-dot"></span>
       <span id="online-status-text">status unknown</span>

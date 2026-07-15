@@ -14,7 +14,8 @@ Opens at `http://localhost:8080`.
 ## Structure
 
 - `src/posts/*.md` — blog posts (add a new `.md` file, front matter needs `title`, `date`, `layout: post.njk`)
-- `src/_data/qsos.json` — your QSO log. Every entry needs `lat`/`lng` so it can be plotted on the globe and shown on the log page. Add contacts here as you make them.
+- `src/_data/qsos.adx` — your QSO log in **ADX** (ADIF's XML format). This is the real amateur radio logging standard — almost every logging program (Log4OM, N1MM+, DXKeeper, CloudLog, HRD, etc.) can export it directly. Export from your software, drop the file in here (overwrite it), commit, push — the site rebuilds and the globe/log table update automatically.
+- `src/_data/qsos.js` — parses the ADX file at build time (no need to touch this unless your software's export uses non-standard field names).
 - `src/_data/site.json` — callsign, QTH, grid square, DMR ID, and the two feed URLs below.
 - `src/index.njk` — homepage with the globe hero
 - `src/log.njk` — full QSO log table (sortable, filterable)
@@ -44,3 +45,7 @@ Simplest option given your TrueNAS setup: a small cron job (or a container along
 ## DMR ID
 
 Once you've got one, drop it into `site.json` → `dmrId` and it'll show up in the header stats automatically.
+
+## How QSO locations are plotted
+
+The globe and log table need a location per contact. Rather than typing lat/lng by hand, the build reads each record's `GRIDSQUARE` field (the Maidenhead locator of the station you worked — most logging software fills this in automatically from their callsign/QRZ lookup) and converts it to lat/lng. If a record has no gridsquare, it's skipped on the globe but still shows in the table.

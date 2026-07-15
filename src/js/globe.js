@@ -4,14 +4,14 @@
   if (!container || typeof Globe === "undefined") return;
 
   const home = window.SITE_HOME || { lat: -33.7667, lng: 151.1414 };
-  const qsos = window.SITE_QSOS || [];
+  const qsos = (window.SITE_QSOS || []).filter((q) => q.lat != null && q.lng != null);
 
   const arcsData = qsos.map((q) => ({
     startLat: home.lat,
     startLng: home.lng,
     endLat: q.lat,
     endLng: q.lng,
-    color: "#59d98c",
+    color: "#8b7cf6",
     label: `${q.callsign} · ${q.band} ${q.mode}`,
   }));
 
@@ -19,18 +19,18 @@
     lat: q.lat,
     lng: q.lng,
     size: 0.6,
-    color: "#ffb347",
+    color: "#e9e9ee",
     label: `${q.callsign} — ${q.location}`,
   }));
 
-  pointsData.push({ lat: home.lat, lng: home.lng, size: 0.9, color: "#59d98c", label: "VK2UNL — home QTH" });
+  pointsData.push({ lat: home.lat, lng: home.lng, size: 0.9, color: "#8b7cf6", label: "VK2UNL — home QTH" });
 
   const globe = Globe()(container)
     .backgroundColor("rgba(0,0,0,0)")
     .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-dark.jpg")
     .bumpImageUrl("https://unpkg.com/three-globe/example/img/earth-topology.png")
     .showAtmosphere(true)
-    .atmosphereColor("#59d98c")
+    .atmosphereColor("#8b7cf6")
     .atmosphereAltitude(0.18)
     .arcsData(arcsData)
     .arcColor("color")
